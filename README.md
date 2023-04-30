@@ -1,3 +1,5 @@
+**This repo was created to demonstrate the no-trailing-slash working from the root directory of a subdomain and all code was imported here from the original repo. This repo is only an example and will not be maintained or updated. For the most current README and repo files, please click [here](https://github.com/randychilau/gatsby-no-trailing-slash-github-pages).** 
+
 ## Example of Gatsby Site hosted on GitHub Pages without a trailing slash (aka "no-trailing-slash") in the url (including the sitemap)
 
 Here is the [example site](https://randychilau.github.io/gatsby-no-trailing-slash-github-pages/). Thanks for visiting!
