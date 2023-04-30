@@ -2,7 +2,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: "/gatsby-no-trailing-slash-github-pages",
+  pathPrefix: "",
   siteMetadata: {
     title: "Gatsby No Trailing Slash Site on GitHub Pages",
     siteUrl: "https://randychilau.github.io/",
