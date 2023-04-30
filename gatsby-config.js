@@ -32,7 +32,7 @@ module.exports = {
       resolvePages: ({
         allSitePage: { nodes: allPages },
       }) => {
-        return allPages.map(page => {
+        return allPages.filter(page => page.path !== "/").map(page => {
           return { ...page };
         });
       },
