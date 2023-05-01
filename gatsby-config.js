@@ -32,12 +32,13 @@ module.exports = {
       resolvePages: ({
         allSitePage: { nodes: allPages },
       }) => {
-        return allPages.filter(page => page.path !== "/").map(page => {
+        return allPages.map(page => {
           return { ...page };
         });
       },
       serialize: ({ path, matchPath }) => {
         let url = matchPath ? matchPath : path;
+        url = url.endsWith("/") ? url.replace(/\/$/, "") : url;
         url = url.startsWith("/") ? url : `/${url}`;
         return {
           url: url,
