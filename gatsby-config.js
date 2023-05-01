@@ -5,7 +5,7 @@ module.exports = {
   pathPrefix: "",
   siteMetadata: {
     title: "Gatsby No Trailing Slash Site on GitHub Pages",
-    siteUrl: "https://randychilau.github.io/",
+    siteUrl: "https://no-trailing-slash.github.io",
     description: "Working example of Gatsby site on GitHub Pages with no-trailing-slash"
   },
   trailingSlash: "never",
@@ -28,7 +28,9 @@ module.exports = {
           }
         }
       `,
-      resolveSiteUrl: ({ site: { siteMetadata: { siteUrl } } }) => siteUrl,
+      resolveSiteUrl: ({ site: { siteMetadata: { siteUrl } } }) => {
+        return siteUrl
+      },
       resolvePages: ({
         allSitePage: { nodes: allPages },
       }) => {
@@ -37,9 +39,10 @@ module.exports = {
         });
       },
       serialize: ({ path, matchPath }) => {
+
         let url = matchPath ? matchPath : path;
-        url = url.endsWith("/") ? url.replace(/\/$/, "") : url;
         url = url.startsWith("/") ? url : `/${url}`;
+        
         return {
           url: url,
           changefreq: "daily",
